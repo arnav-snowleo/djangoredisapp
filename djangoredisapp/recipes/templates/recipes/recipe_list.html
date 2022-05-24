@@ -1,0 +1,33 @@
+List of available recipes
+
+<table>
+    <thead>
+
+        <tr>
+            <th>CATEGORY</th>
+            <th>RECIPE NAME</th>
+            <th>DETAILS</th>
+            <th>more..</th>
+
+        </tr>
+
+        
+    </thead>
+    <tbody>
+
+        {% for recipe in recipes %}
+
+        <tr>
+            <td>{{recipe.category.name}}</td>
+            <td>{{recipe.name}}</td>
+            <td><a href="{% url 'recipe' recipe.id %}">more. </a></td>
+            <td>{{recipe.description}}</td>
+            
+        </tr>
+
+        {%endfor%}
+
+    </tbody>
+
+
+</table>
